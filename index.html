@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>五子棋</h1>
+        <div id="menu">
+            <button onclick="startGame('pvp')">双人对战</button>
+            <button onclick="startGame('pve')">人机对战</button>
+        </div>
+        <div id="game-area" style="display:none">
+            <div id="status-bar">
+                <span id="status-text">黑棋(X) 回合</span>
+                <button id="btn-restart" onclick="showMenu()">重新开始</button>
+            </div>
+            <canvas id="board" width="600" height="600"></canvas>
+        </div>
+        <div id="result-modal" style="display:none">
+            <div id="result-content">
+                <p id="result-text"></p>
+                <button onclick="showMenu()">返回菜单</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/ai.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
